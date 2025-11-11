@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
@@ -8,23 +9,56 @@ public class Latihan : MonoBehaviour
     [SerializeField]
 
     //string[] nama = { "Yaya", "Yoyo", "Yuyu" };
+    //List<string> nama = new List<string>();
+    List<Player> players = new List<Player>();
 
     Player[] arrayPlayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        players();
+        playerList();
+        //cariSatuPlayerByLevel(15);
+        cariBanyakPlayerByLevel(15);
     }
 
-    // void tampilArray()
+    void playerList()
+    {
+        players.Add(new Player("Sakura", 18, 343));
+        players.Add(new Player("Kookie", 43, 7565));
+        players.Add(new Player("Hana", 12, 210));
+        players.Add(new Player("Riku", 20, 500));
+        players.Add(new Player("Ken", 10, 100));
+
+    }
+    void cariSatuPlayerByLevel(int level)
+    {
+        Player p = players.Find(element => element.level > 15);
+        Debug.Log(p.name);
+    }
+
+    void cariBanyakPlayerByLevel(int level)
+    {
+        List<Player> data = players.FindAll(elemenet => elemenet.level > 15);
+        foreach (Player p in data)
+        {
+            Debug.Log($"Nama: {p.name}, Level: {p.level}, Health: {p.health}");
+        }
+
+    }
+    // void tampilArrayList()
     // {
-    //     for (int i = 0; i < nama.Length; i++)
-    //     {
-    //         Debug.Log("Nama " + (i + 1) + " : " + nama[i]);
-    //     }
+    //     nama.Add("Yaya");
+    //     nama.Add("Yoyo");
+    //     nama.Remove("Yaya");
+    //     nama.Add("Yeye");
+    //     nama.Insert(1, "Yuyu");
+    //     string cari = nama.Find(nama => nama == "Yoyo");
+    //     Debug.Log(cari);
+    //     Boolean isExist = nama.Exists(nama => nama == "Yuyu");
+    //     Debug.Log(isExist);
     // }
 
-    void players()
+    void playerArray()
     {
         foreach (Player p in arrayPlayer)
         {
@@ -82,14 +116,14 @@ public class Latihan : MonoBehaviour
 
     void cobaOOP()
     {
-        Player p1 = new Player();
-        p1.name = "Sakura";
-        p1.level = 18;
-        p1.health = 234;
+        // Player p1 = new Player();
+        // p1.name = "Sakura";
+        // p1.level = 18;
+        // p1.health = 234;
 
-        Debug.Log("Player name : " + p1.name);
-        Debug.Log("Level : " + p1.level);
-        Debug.Log("Health : " + p1.health);
+        // Debug.Log("Player name : " + p1.name);
+        // Debug.Log("Level : " + p1.level);
+        // Debug.Log("Health : " + p1.health);
 
     }
 
