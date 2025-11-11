@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[System.Serializable]
 public class Car
 {
     public string merk;
@@ -15,10 +16,10 @@ public class Car
         this.bbm = bbm;
 
     }
-    
+
     public void output()
     {
-        Debug.Log("Merk mobil : " + merk + "\n" 
+        Debug.Log("Merk mobil : " + merk + "\n"
                 + "Warna : " + warna + "\n"
                 + "Tahun keluaran : " + tahun + "\n"
                 + "BBM : " + bbm);

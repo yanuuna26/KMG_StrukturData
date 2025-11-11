@@ -1,18 +1,37 @@
 using System;
 using UnityEngine;
 
+[System.Serializable]
 public class Latihan : MonoBehaviour
 {
+
+    [SerializeField]
+
+    //string[] nama = { "Yaya", "Yoyo", "Yuyu" };
+
+    Player[] arrayPlayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        mobil();
+        players();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    // void tampilArray()
+    // {
+    //     for (int i = 0; i < nama.Length; i++)
+    //     {
+    //         Debug.Log("Nama " + (i + 1) + " : " + nama[i]);
+    //     }
+    // }
 
+    void players()
+    {
+        foreach (Player p in arrayPlayer)
+        {
+            Debug.Log("Nama player : " + p.name + "\n"
+                    + "Level : " + p.level + "\n"
+                    + "Health : " + p.health);
+        }
     }
 
     void cobaWhile(int nyawa)
@@ -82,8 +101,10 @@ public class Latihan : MonoBehaviour
         Car ferrary = new Car("Ferrary", "Red", 2020, "Oil 98");
         ferrary.output();
     }
-    
-    
+
+
+
+
 }
 
 
