@@ -136,9 +136,6 @@ public class Latihan : MonoBehaviour
         ferrary.output();
     }
 
-
-
-
 }
 
 
