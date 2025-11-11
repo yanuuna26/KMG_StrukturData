@@ -15,5 +15,6 @@ public class SquareGerakScript : MonoBehaviour
         gameObject.transform.Translate(3 * Time.deltaTime, 0, 0);
         gameObject.transform.Rotate(0, 0, 100 * Time.deltaTime);
         gameObject.transform.localScale += new Vector3(0.3f, 0.3f, 0) * Time.deltaTime;
+        gameObject.SetActive(false);
     }
 }
