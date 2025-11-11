@@ -219,16 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19cefed44d78d4c00a0138683245cf4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrayPlayer:
-  - name: Yaya
-    level: 10
-    health: 46
-  - name: Yuyu
-    level: 7
-    health: 54
-  - name: Yoyo
-    level: 7
-    health: 45
+  players: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
