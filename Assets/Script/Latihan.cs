@@ -6,7 +6,7 @@ public class Latihan : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log(factorial(4));
+        mobil();
     }
 
     // Update is called once per frame
@@ -45,7 +45,7 @@ public class Latihan : MonoBehaviour
         Debug.Log(penjabaran);
         return hasil;
     }
-    
+
     void segitiga(int tinggi)
     {
         String hasil = "";
@@ -60,6 +60,30 @@ public class Latihan : MonoBehaviour
 
         Debug.Log(hasil);
     }
+
+    void cobaOOP()
+    {
+        Player p1 = new Player();
+        p1.name = "Sakura";
+        p1.level = 18;
+        p1.health = 234;
+
+        Debug.Log("Player name : " + p1.name);
+        Debug.Log("Level : " + p1.level);
+        Debug.Log("Health : " + p1.health);
+
+    }
+
+    void mobil()
+    {
+        Car palisade = new Car("Palisade", "Black", 2025, "Listrik");
+        palisade.output();
+
+        Car ferrary = new Car("Ferrary", "Red", 2020, "Oil 98");
+        ferrary.output();
+    }
+    
+    
 }
 
 
