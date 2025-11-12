@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Rabu, 12 Non UI - 2.unity
+    guid: 58677f48ff4854f5f8244a7d98ecd4a4
+  - enabled: 1
+    path: Assets/Scenes/Rabu, 12 Nov UI.unity
+    guid: fbf92f1e0166b45dbaaef5ee49bf5a3c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
