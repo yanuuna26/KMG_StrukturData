@@ -6,6 +6,7 @@ TagManager:
   tags:
   - sasaran
   - bola
+  - dinding
   layers:
   - Default
   - TransparentFX
