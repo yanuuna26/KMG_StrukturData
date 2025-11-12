@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  objectDeteksi: {fileID: 1570030756}
 --- !u!4 &351533433
 Transform:
   m_ObjectHideFlags: 0
