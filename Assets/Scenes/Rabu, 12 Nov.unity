@@ -416,6 +416,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 351533432}
+  inputEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1570030757
 Transform:
   m_ObjectHideFlags: 0

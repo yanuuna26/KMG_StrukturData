@@ -1,10 +1,12 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DeteksiInput : MonoBehaviour
 {
     public Score score;
-    public Action inputEvent;
+    //public Action<int> inputEvent; // event dari C#
+    public UnityEvent inputEvent; //event dr Unity
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,8 +19,10 @@ public class DeteksiInput : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //score.AddScore();
-            //panggil event
+            //panggil event 
             inputEvent.Invoke();
+            
+
         }
     }
 }
