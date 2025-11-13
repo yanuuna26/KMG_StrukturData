@@ -218,7 +218,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -261,10 +261,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waktu: 0
+  maxWaktu: 20
   textTimer: {fileID: 2100016092}
   waktuBerjalan: 1
   startWaktu: 49
   endWaktu: 50
+  progressFill: {fileID: 1410460773}
 --- !u!4 &198940526
 Transform:
   m_ObjectHideFlags: 0
@@ -764,10 +766,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waktu: 0
+  maxWaktu: 10
   textTimer: {fileID: 1393186097}
   waktuBerjalan: 1
   startWaktu: 51
   endWaktu: 52
+  progressFill: {fileID: 188617042}
 --- !u!4 &972912380
 Transform:
   m_ObjectHideFlags: 0
@@ -919,10 +923,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waktu: 0
+  maxWaktu: 0
   textTimer: {fileID: 1339202615}
   waktuBerjalan: 1
   startWaktu: 53
   endWaktu: 54
+  progressFill: {fileID: 0}
 --- !u!4 &1220845065
 Transform:
   m_ObjectHideFlags: 0
@@ -1272,7 +1278,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0

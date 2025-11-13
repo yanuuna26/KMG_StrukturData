@@ -21,7 +21,7 @@ public class SquateSpawner : MonoBehaviour
     {
         while (sedangSpawn)
         {
-             float setengahTinggi = Camera.main.orthographicSize;
+            float setengahTinggi = Camera.main.orthographicSize;
             float setengahLebar = setengahTinggi * Camera.main.aspect;
 
             // Posisi acak dalam area kamera

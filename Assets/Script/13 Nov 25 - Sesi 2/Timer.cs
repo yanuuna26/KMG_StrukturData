@@ -1,20 +1,27 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public int waktu;
+    public float waktu;
+    public float maxWaktu;
     public TMP_Text textTimer;
     public bool waktuBerjalan = true;
     public KeyCode startWaktu, endWaktu;
     public Coroutine hitungTimerCoroutine;
 
+    public Image progressFill;
+
     void Update()
     {
         if (Input.GetKeyDown(startWaktu))
         {
-            hitungTimerCoroutine = StartCoroutine(hitungTimer());
+            if(hitungTimerCoroutine == null)
+            {
+                hitungTimerCoroutine = StartCoroutine(hitungTimer());
+            }
         }
         if (Input.GetKeyDown(endWaktu))
         {
@@ -30,6 +37,7 @@ public class Timer : MonoBehaviour
         {
             waktu++;
             textTimer.text = waktu.ToString();
+            progressFill.fillAmount = waktu / maxWaktu;
             yield return new WaitForSeconds(1);    
         }
     }
