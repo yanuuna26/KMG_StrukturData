@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SquareGame : MonoBehaviour
@@ -8,7 +9,7 @@ public class SquareGame : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        interaksiGame.gameOverText.gameObject.SetActive(false); 
     }
 
     // Update is called once per frame
@@ -65,11 +66,24 @@ public class SquareGame : MonoBehaviour
             {
                 arahGerak = ArahGerak.kanan;
             }
+
+            //nilai skore ++
+            interaksiGame.score++;
+            tambahScore();
         }
-        //nilai skore ++
-        interaksiGame.score++;
-        tambahScore();
-    }
+
+        if (collision.gameObject.CompareTag("bola_game"))
+        {
+            interaksiGame.nyawa--;
+            interaksiGame.textNyawa.text = "Nyawa : " + interaksiGame.nyawa;
+            if(interaksiGame.nyawa <= 0)
+            {
+                Time.timeScale = 0f; // pause
+                interaksiGame.gameOverText.gameObject.SetActive(true); 
+            }
+        }
+    }   
+       
 }
 
 
