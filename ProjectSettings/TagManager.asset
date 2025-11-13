@@ -8,6 +8,7 @@ TagManager:
   - bola
   - dinding
   - bola_game
+  - lantai
   layers:
   - Default
   - TransparentFX
