@@ -38,6 +38,7 @@ public class SquareGame : MonoBehaviour
                 gameObject.transform.Translate(-kecepatan * Time.deltaTime, 0, 0);
                 break;
         }
+        //agar bisa WASD
         if (Input.GetKeyDown(KeyCode.W))
         {
             arahGerak = ArahGerak.atas;
@@ -87,6 +88,7 @@ public class SquareGame : MonoBehaviour
 
         if (collision.gameObject.CompareTag("bola_game"))
         {
+            //nyawa berkurang
             interaksiGame.nyawa--;
             interaksiGame.textNyawa.text = "Nyawa : " + interaksiGame.nyawa;
             if(interaksiGame.nyawa <= 0)
