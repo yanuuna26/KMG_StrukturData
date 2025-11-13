@@ -38,6 +38,19 @@ public class SquareGame : MonoBehaviour
                 gameObject.transform.Translate(-kecepatan * Time.deltaTime, 0, 0);
                 break;
         }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            arahGerak = ArahGerak.atas;
+        } else if (Input.GetKeyDown(KeyCode.S))
+        {
+            arahGerak = ArahGerak.bawah;
+        } else if (Input.GetKeyDown(KeyCode.A))
+        {
+            arahGerak = ArahGerak.kiri;
+        } else if (Input.GetKeyDown(KeyCode.D))
+        {
+            arahGerak = ArahGerak.kanan;
+        }
     }
     public void tambahScore()
     {
